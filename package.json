@@ -5,7 +5,10 @@
   "author": "MattFerreira18 <matheusferreira.dev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest --passWithNoTests",
+    "test:watch": "yarn test -- --watch",
+    "test:staged": "yarn test -- --findRelatedTests",
+    "test:ci": "jest -- --coverage"
   },
   "devDependencies": {
     "@types/jest": "^29.4.0",
