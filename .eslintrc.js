@@ -1,25 +1,36 @@
+/**
+ * @type {import("eslint").Linter.Config}
+ */
 module.exports = {
   env: {
     browser: true,
     es2021: true,
   },
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
   ],
   overrides: [],
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: './tsconfig.json',
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: "./tsconfig.json",
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ["react", "@typescript-eslint"],
   rules: {
-    indent: ['error', 2],
-    'linebreak-style': ['error', 'unix'],
-    quotes: ['error', 'single'],
-    semi: ['error', 'always'],
+    indent: ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    quotes: ["error", "single"],
+    semi: ["error", "always"],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+  },
+  settings: {
+    react: {
+      version: "detect",
+    },
   },
 };
